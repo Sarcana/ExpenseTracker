@@ -1,0 +1,51 @@
+USe pipenv to isntall virtual environments
+
+#PS D:\Project\DJango\ExpenseTracker> python -m venv Tracker
+
+# pipenv
+python -m pipenv install django //it works outside of folder of venv
+nstalling django...
+Resolving django...
+Adding django to Pipfile's [packages] ...
+Installation Succeeded
+Pipfile.lock (e4eef2) out of date, up
+
+#migaration can be thought of as table it gives withfunctionalitiys
+
+#Connect a DB ->settings me jaake database
+Error loading psycopg2 or psycopg module ->
+
+#error with c++bild too
+#Upgrade your pip with: python -m pip install --upgrade pip
+Upgrade your wheel with: pip install --upgrade wheel
+Upgrade your setuptools with: pip install --upgrade setuptools
+Close the terminal
+Try installing the package again.
+
+#virtual environment sirf cmd me activate htota powershell me 
+ImportError: Couldn't import Django. Are you sure it's installed and available on your PYTHONPATH environment variable? Did you forget to activate a virtual environment?
+Courtesy Notice: Pipenv found itself running within a virtual environment, so it will automatically use that environment, instead of creating its own for any project. You can set PIPENV_IGNORE_VIRTUALENVS=1 to force pipenv to ignore that environment and create its own instead. You can set PIPENV_VERBOSITY=-1 to suppress this warning.
+Launching subshell in virtual environment...
+Microsoft Windows [Version 10.0.19045.3208]
+(c) Microsoft Corporation. All rights reserved.
+
+PS D:\Project\DJango\ExpenseTracker> pipenv shell
+Shell for C:\Users\shash\.virtualenvs\ExpenseTracker-dW94x-TI already activated.
+New shell not activated to avoid nested environments.
+
+->virtual env is complete expensetracker folder 
+
+
+#HOW NOT TO HARDCODE CRENDENTIALS
+ERROR AA RHA >ENV FILE SE IMPORT KARNE ME ->solution maybe source .env file
+
+specify directories in template  os .path join vs base dir
+
+#OS PATH JOIN
+
+#{% load static %} 
+in base.html
+
+partials->to laod common stuff
+
+#I was unabme to load the site currectly turns out that we have to place the static folder in the mainsite folder
