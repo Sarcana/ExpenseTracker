@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
+from django.contrib import messages
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -138,7 +139,12 @@ STATICFILES_DIRS = [
 ]
 STATIC_ROOT='static/'
 
-# Configure Django App for Heroku.
-import django_heroku
-django_heroku.settings(locals())
+# # Configure Django App for Heroku.
+# import django_heroku
+# django_heroku.settings(locals())
 
+
+# The MESSAGES_TAGS dictionary in Django is used to map message levels to Bootstrap alert classes (or any other CSS classes) when displaying messages. In your example, you're mapping the messages.ERROR level to the Bootstrap class 'danger'.
+MESSAGES_TAGS={
+    messages.ERROR:'danger'
+}

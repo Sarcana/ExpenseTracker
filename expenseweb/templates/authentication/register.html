@@ -1,11 +1,70 @@
 {% extends 'base_auth.html' %}
+{%load static%}  
+<!-- to Link to javascript files  jab tak yeh nahi hoga toh work nahi karega -->
+
 
 {% block content %}
-
-<div class="card">
-
-    <div class="card-body">
-        <h1>Login</h1>
+ <style>
+    /* hardcoded my designs */
+    input[type=text],
+    input[type=password],
+    input[type=email] {
+        width: 90%;
+        padding: 10px;
+        margin: 5px 0 22px 0;
+        display: inline-flex;
+        border: none;
+        background: #f1f1f1;
+    }
+    .col-md-4 {
+    flex: 0 0 auto;
+    width: 23%;
+}
+</style> 
+<div class="row">
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-8 ">
+        <div class="card mt-5 ">
+            <div class="card-body text-center" >
+                <div class="card-title ">
+                    <h4>Register for a free account</h4>
+                </div>
+                 <!-- this ensures we are submitting to a VIEW named register -->
+                <form action="{% url 'register' %}" method="post">  
+                     {%csrf_token%}
+                    {%include 'partials/messages.html'%}
+                    <div class="form-group">
+                        <input type="email" name="email" id="emailField" placeholder="Email"
+                            class="form-control form-control-sm">
+                    </div>
+                    <div class="emailfeedbackArea invalid-feedback" style="display: none;">
+                        
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="username" id="userNameField" placeholder="UserName"
+                            class="form-control form-control-sm">
+                    </div>
+                    <!-- well manipulate div in js file -->
+                    <div class="invalid-feedback invalid-feedback" style="display: none;">
+                        
+                    </div>
+                    <div class="text-sm text-success usernameSuccessOutput"></div>
+                    <div class="form-group">
+                        <input type="password" name="password" id="passwordField" placeholder="Password"
+                            class="form-control form-control-sm">
+                    </div>
+                    <small class="float-end showPwd ">SHOW</small>
+                    <input type="submit" value="Register" class="btn btn-block btn-primary mt-3">
+                </form>
+            </div>
+        </div>
     </div>
 </div>
+<div class="col-md-8">
+</div>
+</div>
+
+<script src="{% static 'js/register.js' %}"></script>
+
 {% endblock content %}

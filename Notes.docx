@@ -49,3 +49,20 @@ in base.html
 partials->to laod common stuff
 
 #I was unabme to load the site currectly turns out that we have to place the static folder in the mainsite folder
+
+To activate this project's virtualenv, run pipenv shell.
+Alternatively, run a command inside the virtualenv with pipenv run.
+
+#Heroku Deployment
+create procfile and wadd web: gunicorn import and change setting.py
+
+pip -V to check vEnv
+
+#Bootstrap 
+form group
+
+#JSON allows to communicate between views and db without having to reload the page
+
+#Sengin request for validate-username 403 Forbbiden why? because django treats all post request to have  specifc token to prevent from cross site scripting
+
+return JsonResponse({'username_valid':True})   : instead of , TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.   ->maybecause json is key value pair
